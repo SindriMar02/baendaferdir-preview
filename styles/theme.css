@@ -1,0 +1,243 @@
+/* Brand overrides. Source values remain in webflow.css and experience.css. */
+:root {
+  --brand-green: #0d2e37;
+  --brand-accent: #fb9826;
+  --button-clicked: #fa8805;
+}
+
+/* Bændaferðir slice only: other Vita routes retain their source theme. */
+/* Vita's dark ink surfaces and white-alpha hierarchy stay; Bændaferðir red is the accent (white on #972319 = 7.6:1). */
+html[data-brand="baendaferdir"] {
+  --brand-green: #0d2e37;
+  --brand-accent: #972319;
+  --button-clicked: #b02a1e;
+}
+html[data-brand="baendaferdir"] .body { background:#091b20; font-family:Inter,sans-serif; }
+html[data-brand="baendaferdir"] .header.is-active,
+html[data-brand="baendaferdir"] .mobile-menu { background:#091b20; }
+/* No raw browser link colour anywhere on the brand pages. */
+html[data-brand="baendaferdir"] a { color:inherit; text-decoration:none; }
+html[data-brand="baendaferdir"] .header-logo { width:3.5rem;height:3.5rem;object-fit:contain; }
+html[data-brand="baendaferdir"] .header__l { padding-top:0;padding-bottom:0; }
+html[data-brand="baendaferdir"] .footer-logo img { width:3.5rem;height:3.5rem;object-fit:contain; }
+html[data-brand="baendaferdir"] .intro { background-image:var(--hero-photo); }
+html[data-brand="baendaferdir"] .intro__headline { font-size:min(11.875rem,14vw);letter-spacing:-.052em; }
+html[data-brand="baendaferdir"] .intro__text { color:#fff; text-shadow:none; }
+html[data-brand="baendaferdir"] .body-xxl { letter-spacing:-.01em; }
+html[data-brand="baendaferdir"] .featured-item__illustration { width:100%;height:100%;object-fit:cover; }
+html[data-brand="baendaferdir"] .featured-item__visual { overflow:hidden; }
+html[data-brand="baendaferdir"] .featured-item__head .h4 { overflow-wrap:break-word; }
+html[data-brand="baendaferdir"] .footer__visual { opacity:.22; }
+html[data-brand="baendaferdir"] .footer-top__links { gap:1rem; }
+html[data-brand="baendaferdir"] .footer-top__contact { margin-bottom:.65rem; }
+html[data-brand="baendaferdir"] .itinerary-day { padding:2rem 0;border-bottom:1px solid #ffffff33; }
+html[data-brand="baendaferdir"] .itinerary-day p,
+html[data-brand="baendaferdir"] .retreat-page-content-item p { margin:1rem 0;line-height:1.6; }
+html[data-brand="baendaferdir"] .walk-chips { display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem; }
+html[data-brand="baendaferdir"] .walk-chips span { border:1px solid #ffffff66;padding:.5rem .75rem; }
+html[data-brand="baendaferdir"] .inclusion { border-bottom:1px solid #ffffff66; }
+html[data-brand="baendaferdir"] .inclusion-toggle { width:100%;display:flex;justify-content:space-between;text-align:left;padding:1.25rem 0;background:transparent;color:white;cursor:pointer; }
+html[data-brand="baendaferdir"] .inclusion-panel { height:0;overflow:hidden; }
+html[data-brand="baendaferdir"] .inclusion-panel ul { margin:0;padding:0 1.5rem 1.5rem;line-height:1.6; }
+html[data-brand="baendaferdir"] .trip-guide { width:12rem;max-width:100%; }
+html[data-brand="baendaferdir"] .btn-secondary { color:white; }
+html[data-brand="baendaferdir"] :where(a,button):focus-visible { outline:2px solid white;outline-offset:4px; }
+html[data-brand="baendaferdir"] .btn-primary:active { background:#972319;color:white; }
+html[data-brand="baendaferdir"] .retreat-page-intro__photos { flex-wrap:wrap; }
+html[data-brand="baendaferdir"] .retreat-page-intro__photo { object-fit:cover; }
+html[data-brand="baendaferdir"] .practitioners-person__visual { display:block;color:white; }
+html[data-brand="baendaferdir"] .practitioners-person__photo { object-fit:cover; }
+@media (hover:hover) and (pointer:fine) {
+ html[data-brand="baendaferdir"] .btn-primary:hover {background:white;color:#0d2e37;}
+ html[data-brand="baendaferdir"] .inclusion-toggle:hover {color:white;text-decoration:underline;}
+}
+@media(max-width:479px) {
+ html[data-brand="baendaferdir"] .intro__headline {font-size:16vw;letter-spacing:-.05em;}
+ html[data-brand="baendaferdir"] .header-logo {width:3rem;height:3rem;}
+ html[data-brand="baendaferdir"] .itinerary-day {padding:1.5rem 0;}
+ html[data-brand="baendaferdir"] .retreat-page-intro__photos {display:block;}
+}
+html[data-brand="baendaferdir"] .destination {background-image:none;}
+@media(max-width:479px){
+}
+@media(min-width:480px){
+ html[data-brand="baendaferdir"] .retreat-page-intro__photos > .retreat-page-intro__photo:nth-child(n+5) {display:none;}
+}
+html[data-brand="baendaferdir"] .guide-toggle {border:0;padding:0;background:transparent;text-align:left;color:white;width:100%;cursor:pointer;}
+html[data-brand="baendaferdir"] [data-guide] .coaches-person-info {opacity:0;pointer-events:none;transition:opacity .2s linear;overflow:auto;}
+html[data-brand="baendaferdir"] [data-guide].is-open .coaches-person-info {opacity:1;pointer-events:auto;}
+html[data-brand="baendaferdir"] [data-guide] .coaches-person-info__head {height:auto!important;}
+html[data-brand="baendaferdir"] .guide-close {color:white;background:transparent;padding:.75rem;float:right;cursor:pointer;}
+html[data-brand="baendaferdir"] .featured-item {border-top:1px solid #ffffff33;}
+html[data-brand="baendaferdir"] .featured-item:nth-child(even) {border-left:1px solid #ffffff33;}
+@media(max-width:479px){html[data-brand="baendaferdir"] .featured-item:nth-child(even){border-left:0;}}
+@media(min-width:480px){
+ html[data-brand="baendaferdir"] .retreat-page-intro__photo {width:100%;min-height:0;}
+}
+/* Slice 3: retain Vita surfaces while accommodating real content. */
+html[data-brand="baendaferdir"] .contact-facts {display:block;padding:3rem;line-height:1.6;}
+html[data-brand="baendaferdir"] .contact-facts p {margin:1rem 0;}
+html[data-brand="baendaferdir"] .coaches-person__photo {object-fit:cover;}
+html[data-brand="baendaferdir"] .coaches-person-info p {margin-bottom:1rem;line-height:1.5;}
+html[data-brand="baendaferdir"] .legal-content__item p {margin:1rem 0;line-height:1.6;}
+html[data-brand="baendaferdir"] .map-pin:focus {outline:none;}
+html[data-brand="baendaferdir"] .map-pin:focus-visible .map-hit {stroke:white;stroke-width:2;}
+html[data-brand="baendaferdir"] .guide-toggle {display:block;}
+@media(max-width:479px){
+ html[data-brand="baendaferdir"] .contact-facts {padding:1.5rem 0;}
+ html[data-brand="baendaferdir"] .coaches-person-info {max-height:100%;}
+}
+@media(prefers-reduced-motion:reduce){html[data-brand="baendaferdir"] [data-guide] .coaches-person-info {transition:none;}}
+html[data-brand="baendaferdir"] .coaches-person[data-guide]:not(.is-open) .coaches-person-info {opacity:0;pointer-events:none;}
+html[data-brand="baendaferdir"] .coaches-person:nth-child(3n+2) {border-left:1px solid var(--white-10);border-right:1px solid var(--white-10);}
+@media(max-width:479px){html[data-brand="baendaferdir"] .coaches-person:nth-child(3n+2){border-left:0;border-right:0;}}
+html[data-brand="baendaferdir"] [hidden] {display:none!important;}
+/* Long harvested galleries (Japan 42, Comovatn 19 photos) put one Slick dot per slide; keep the dot row inside the phone width. */
+@media (max-width:479px){html[data-brand="baendaferdir"] .slick-dots {flex-wrap:wrap;max-width:100%;box-sizing:border-box;padding:0 1.25rem;row-gap:.25rem;}
+html[data-brand="baendaferdir"] .slick-dots li button {width:1rem;height:1rem;}}
+/* Icelandic legal link labels (Persónuverndarstefna, Almennir skilmálar) are longer than Vita's; let the footer bottom row wrap on phones. */
+@media (max-width:479px){html[data-brand="baendaferdir"] .footer-bottom__links {flex-wrap:wrap;box-sizing:border-box;row-gap:.5rem;}}
+/* Current nav item: the brand red (#972319) on #00585F is ~1.9:1, unreadable; keep it white and mark it with an underline. */
+html[data-brand="baendaferdir"] .button-sm.color-white.header-nav__link.w--current {color:#fff;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.35em;}
+/* The removed "Allar ferðir" block used to hold the right gutter; give the nav Vita's 2.5rem side padding back. */
+@media (min-width:480px){html[data-brand="baendaferdir"] .header__r {padding-right:2.5rem;}}
+
+/* Visual repair 1: Vita component dimensions; no palette or motion overrides. */
+html[data-brand="baendaferdir"] .featured-item {border-color:var(--white-10);}
+html[data-brand="baendaferdir"] .featured-item:nth-child(even) {border-left-color:var(--white-10);}
+html[data-brand="baendaferdir"] .practitioners-person__visual {aspect-ratio:1;overflow:hidden;}
+html[data-brand="baendaferdir"] .practitioners-person__photo {display:block;width:100%;height:100%;object-fit:cover;}
+html[data-brand="baendaferdir"] .destination {position:relative;overflow:hidden;}
+html[data-brand="baendaferdir"] .destination > .container {position:relative;z-index:1;pointer-events:none;}
+html[data-brand="baendaferdir"] .destination__code {position:absolute;inset:12rem 0 0;display:block;}
+html[data-brand="baendaferdir"] .destination__dots {position:static;display:block;width:100%;height:100%;}
+html[data-brand="baendaferdir"] .footer-top__links {gap:0;}
+html[data-brand="baendaferdir"] .footer-top__contact {margin-bottom:0;}
+html[data-brand="baendaferdir"] .footer-logo {display:inline-flex;width:auto;}
+html[data-brand="baendaferdir"] .retreat-page-content-item > p {line-height:1.3;}
+html[data-brand="baendaferdir"] .legal-content__item p {line-height:1.3;margin:.75rem 0;}
+html[data-brand="baendaferdir"] .contact-us__illustration {width:100%;height:100%;object-fit:cover;}
+html[data-brand="baendaferdir"] .main-wrapper:has(.contact-us) .footer__visual {display:none;}
+@media(min-width:480px){
+ html[data-brand="baendaferdir"] .retreat-page-intro__photos {height:calc((100vw - 5rem) * .4);min-height:0;grid-template-rows:minmax(0,1fr) minmax(0,1fr);}
+ html[data-brand="baendaferdir"] .retreat-page-intro__photo {height:100%;max-height:100%;min-width:0;min-height:0;}
+}
+@media(max-width:479px){
+ html[data-brand="baendaferdir"] .footer-logo img {width:3rem;height:3rem;}
+ html[data-brand="baendaferdir"] .destination {aspect-ratio:auto;min-height:40rem;}
+ html[data-brand="baendaferdir"] .destination__code {inset:13rem 0 1rem;}
+ html[data-brand="baendaferdir"] .destination__dots {height:auto;min-height:23rem;}
+}
+
+html[data-brand="baendaferdir"] .about__visual {aspect-ratio:660/540;}
+html[data-brand="baendaferdir"] .about__illustration {display:block;width:100%;height:100%;object-fit:cover;}
+
+@media(max-width:479px){html[data-brand="baendaferdir"] .about__visual {aspect-ratio:335/366;}}
+/* Catalogue has six rows; its rules follow actual cards, rather than home thirds. */
+@media(min-width:480px){
+ html[data-brand="baendaferdir"] .featured__items:not(:has(.featured__dec)) > .featured-item {border-top:1px solid var(--white-10)!important;}
+ html[data-brand="baendaferdir"] .featured__items:not(:has(.featured__dec)) > .featured-item:nth-child(even) {border-left:1px solid var(--white-10)!important;}
+}
+/* Land read too dim (phone especially): lift the fill one step and give coastlines a faint white line, still darker than Vita's text tones. */
+html[data-brand="baendaferdir"] .map-land {fill:#143a43;stroke:#ffffff2e;stroke-width:.6;vector-effect:non-scaling-stroke;}
+@media(max-width:479px){html[data-brand="baendaferdir"] .map-land {fill:#184651;stroke:#ffffff40;}}
+html[data-brand="baendaferdir"] .tw-word {white-space:nowrap;}
+/* Hero: legibility from a soft scrim behind the text, never a text-shadow (it bled into the button label). */
+html[data-brand="baendaferdir"] .intro {position:relative;}
+html[data-brand="baendaferdir"] .intro::after {content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 45% at 50% 52%,#091b2066,#091b2000 70%);pointer-events:none;z-index:0;}
+html[data-brand="baendaferdir"] .intro > .intro__in {position:relative;z-index:1;}
+html[data-brand="baendaferdir"] .intro > .intro__button {z-index:2;}
+/* Primary button in Bændaferðir red: solid pill, white label, no Vita star glyph. */
+html[data-brand="baendaferdir"] .btn-primary {background:#972319;box-shadow:none;}
+html[data-brand="baendaferdir"] .btn-primary .button-sm {color:#fff;text-shadow:none;font-weight:500;}
+html[data-brand="baendaferdir"] .btn-primary .btn-icon {display:none;}
+html[data-brand="baendaferdir"] .btn-primary:hover {background:#fff;}
+html[data-brand="baendaferdir"] .btn-primary:hover .button-sm {color:#972319;}
+/* Tailoring: Vita grids and hairlines organized around dates and named leaders. */
+html[data-brand="baendaferdir"] .brand-dot {display:inline-block;flex:none;width:6px;height:6px;border-radius:50%;background:#972319;}
+html[data-brand="baendaferdir"] .hero-seasons {display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:24px;font-size:16px;line-height:1.5;}
+html[data-brand="baendaferdir"] .hero-seasons a {color:#fff;}
+html[data-brand="baendaferdir"] .departures-section,
+html[data-brand="baendaferdir"] .brochure-section {padding-top:5rem;padding-bottom:5rem;}
+html[data-brand="baendaferdir"] .departure-row {display:grid;grid-template-columns:1.1fr 1.8fr 1.5fr 1fr;gap:24px;align-items:center;padding:24px 0;border-top:1px solid var(--white-10);color:white;font-size:17px;line-height:1.5;}
+html[data-brand="baendaferdir"] .departure-row:last-child {border-bottom:1px solid var(--white-10);}
+html[data-brand="baendaferdir"] :is(.departure-date,.departure-trip,.departure-guides) {display:flex;flex-direction:column;gap:8px;min-width:0;}
+html[data-brand="baendaferdir"] .departure-trip .h4 {font-size:clamp(20px,1.65vw,28px);}
+html[data-brand="baendaferdir"] .trip-guide {display:flex;align-items:center;gap:12px;font-size:17px;line-height:1.5;color:white;}
+html[data-brand="baendaferdir"] .trip-guide img {width:40px;height:40px;object-fit:cover;border-radius:50%;flex:none;}
+html[data-brand="baendaferdir"] .featured-guide-list {display:grid;gap:12px;margin-bottom:12px;}
+html[data-brand="baendaferdir"] .sidebar-guide {display:grid;gap:12px;margin-bottom:24px;}
+html[data-brand="baendaferdir"] .sidebar-guide img {width:56px;height:56px;}
+html[data-brand="baendaferdir"] .trip-phone {display:block;color:white;font-size:17px;line-height:1.5;padding:16px 0;text-decoration:underline;text-underline-offset:4px;}
+html[data-brand="baendaferdir"] .intro-departure {display:flex;gap:24px;font-size:clamp(20px,2vw,28px);line-height:1.5;margin:0 0 24px;}
+html[data-brand="baendaferdir"] .statistic__items {grid-template-columns:repeat(4,minmax(0,1fr));}
+html[data-brand="baendaferdir"] .statistic-item {color:white;border-right:1px solid var(--white-10);padding:2.5rem 1.5rem;}
+html[data-brand="baendaferdir"] .statistic-item:last-child {border-right:0;}
+html[data-brand="baendaferdir"] .history-timeline {display:grid;gap:24px;}
+html[data-brand="baendaferdir"] .history-entry {border-top:1px solid var(--white-10);padding-top:20px;display:grid;grid-template-columns:100px 1fr;gap:24px;}
+html[data-brand="baendaferdir"] .history-entry p {margin:0;}
+html[data-brand="baendaferdir"] .brochure-section {border-top:1px solid var(--white-10);}
+html[data-brand="baendaferdir"] .brochure-section .container {display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+html[data-brand="baendaferdir"] .brochure-section p {margin-bottom:24px;}
+html[data-brand="baendaferdir"] :is(.retreat-page-content-item,.legal-content,.legal-page-content,.coaches-person-info,.about__content,.how-works-section,.brochure-section) :is(p,.body-md,.body-md-regular,.body-xl,.body-lg,.body-l) {font-size:max(17px,1rem);line-height:1.5;}
+html[data-brand="baendaferdir"] .guide-upcoming {display:grid;gap:12px;margin-top:16px;}
+html[data-brand="baendaferdir"] .guide-upcoming a {display:block;color:white;font-size:17px;line-height:1.5;text-decoration:underline;text-underline-offset:4px;}
+html[data-brand="baendaferdir"] .guide-upcoming span {display:block;font-size:15px;}
+html[data-brand="baendaferdir"] .coaches-person__visual {aspect-ratio:auto;}
+html[data-brand="baendaferdir"] .coaches-person__photo {height:auto;aspect-ratio:373/387;}
+html[data-brand="baendaferdir"] .coaches-person__head {position:static;padding-top:16px;}
+html[data-brand="baendaferdir"] .practitioners-person__visual {aspect-ratio:auto;overflow:visible;}
+html[data-brand="baendaferdir"] .practitioners-person__photo {height:auto;aspect-ratio:1;}
+html[data-brand="baendaferdir"] .practitioners-person__text {position:static;padding-top:16px;}
+html[data-brand="baendaferdir"] .practitioners-person__text :is(.body-lg,.body-sm) {font-size:17px;line-height:1.5;}
+html[data-brand="baendaferdir"] [data-guide] {scroll-margin-top:100px;}
+@media (hover:hover) and (pointer:fine) {
+ html[data-brand="baendaferdir"] .departure-row:hover {background:var(--white-10);}
+ html[data-brand="baendaferdir"] :is(.hero-seasons a,.trip-guide,.guide-upcoming a,.trip-phone):hover {text-decoration:underline;text-underline-offset:4px;}
+}
+html[data-brand="baendaferdir"] :is(.departure-row,.trip-guide,.hero-seasons a,.trip-phone):active {opacity:.75;}
+@media(max-width:991px){
+ html[data-brand="baendaferdir"] .departure-row {grid-template-columns:1fr 1.5fr;gap:16px;}
+ html[data-brand="baendaferdir"] .statistic__items {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:479px){
+ html[data-brand="baendaferdir"] .departure-row {grid-template-columns:1fr;gap:16px;padding:24px 0;}
+ html[data-brand="baendaferdir"] .hero-seasons {max-width:335px;margin-top:16px;font-size:15px;gap:6px;}
+ html[data-brand="baendaferdir"] .intro > .intro__button {display:flex;flex-direction:column;align-items:center;justify-content:flex-end;}
+ html[data-brand="baendaferdir"] .intro > .intro__button .btn-primary {width:auto;}
+ html[data-brand="baendaferdir"] .brochure-section .container {grid-template-columns:1fr;gap:24px;}
+ html[data-brand="baendaferdir"] .history-entry {grid-template-columns:1fr;gap:12px;}
+ html[data-brand="baendaferdir"] .intro-departure {flex-direction:column;gap:4px;}
+ html[data-brand="baendaferdir"] .departures-section,
+ html[data-brand="baendaferdir"] .brochure-section {padding-top:48px;padding-bottom:48px;}
+}
+/* Guide trip links are siblings of disclosure buttons, never nested controls. */
+html[data-brand="baendaferdir"] .how-works-item__body .body-md {color:white;}
+html[data-brand="baendaferdir"] .retreat-page-info__headline {flex-direction:column;align-items:flex-start;}
+html[data-brand="baendaferdir"] .retreat-page-info__headline .h4 {font-size:17px;line-height:1.5;}
+/* Booking steps: no Vita icons, so the step number carries the head (large, red) and the icon-sized gap closes. */
+html[data-brand="baendaferdir"] .how-works-item__head {min-height:0;height:auto;margin-bottom:1.25rem;}
+html[data-brand="baendaferdir"] .how-works-item__count {font-size:3rem;line-height:1;font-weight:600;letter-spacing:-.04em;color:#972319;}
+html[data-brand="baendaferdir"] .how-works-item__body {margin-top:0;}
+html[data-brand="baendaferdir"] .how-works-item__body a {text-decoration:underline;text-underline-offset:.2em;}
+html[data-brand="baendaferdir"] .how-works-item {height:auto;min-height:0;justify-content:flex-start;gap:1.25rem;}
+/* Home leaders: names sit under the photo, so Vita's over-photo gradient goes; the right column stacks heading, count, copy and link instead of Vita's two half-height cells. */
+html[data-brand="baendaferdir"] .practitioners-person__visual::after {display:none;}
+html[data-brand="baendaferdir"] .practitioners-person__text .body-sm {color:var(--white-60);}
+html[data-brand="baendaferdir"] .practitioners__text {display:flex;flex-direction:column;justify-content:center;}
+html[data-brand="baendaferdir"] .practitioners__row.padding-top-0 {padding-bottom:2.5rem;}
+html[data-brand="baendaferdir"] .practitioners__items {display:flex;flex-direction:column;align-items:flex-start;gap:2rem;height:auto;}
+html[data-brand="baendaferdir"] .practitioners-item {height:auto;}
+html[data-brand="baendaferdir"] .practitioners-item__icon {display:none;}
+/* Map pins: a label names the trip on hover, keyboard focus or first tap. */
+html[data-brand="baendaferdir"] .destination__code {position:relative;}
+html[data-brand="baendaferdir"] .map-pin circle {transition:r .2s cubic-bezier(.23,1,.32,1);}
+html[data-brand="baendaferdir"] .map-pin:hover g circle, html[data-brand="baendaferdir"] .map-pin:focus-visible g circle {r:16;}
+html[data-brand="baendaferdir"] .map-tip {position:absolute;z-index:3;transform:translate(-50%,calc(-100% - 10px));display:flex;flex-direction:column;gap:2px;width:max-content;max-width:min(280px,80vw);padding:.75rem 1rem;background:#f5f1ea;color:#0d2e37;border-radius:6px;box-shadow:0 8px 24px #0006;pointer-events:none;animation:map-tip-in .18s cubic-bezier(.23,1,.32,1);}
+html[data-brand="baendaferdir"] .map-tip.is-below {transform:translate(-50%,10px);}
+html[data-brand="baendaferdir"] .map-tip[hidden] {display:none;}
+html[data-brand="baendaferdir"] .map-tip__title {font-weight:600;font-size:15px;line-height:1.3;}
+html[data-brand="baendaferdir"] .map-tip__meta {font-size:13px;opacity:.75;}
+html[data-brand="baendaferdir"] .map-tip__price {font-size:13px;font-weight:600;color:var(--brand-accent);}
+@keyframes map-tip-in {from {opacity:0;}}
+@media (prefers-reduced-motion:reduce) {html[data-brand="baendaferdir"] .map-tip {animation:none;} html[data-brand="baendaferdir"] .map-pin circle {transition:none;}}
